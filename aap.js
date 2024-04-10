@@ -45,11 +45,14 @@ const editdata = (currentElement) => {
         currentElement.textContent = "Done";
         const currentInput = document.createElement('input');
         currentInput.className = 'inputval';
+        currentInput.setAttribute("autofocus", "true");
         const currname = currentElement.previousElementSibling.innerText;
         currentInput.value = currname;
         currentElement.parentElement.replaceChild(currentInput, currentElement.previousElementSibling)
+        document.querySelector('.inputval').focus();
 
     }
+    
     savedata()
 }
 const deletedata = (currentElement) => {
